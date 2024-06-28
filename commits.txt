@@ -1,0 +1,179 @@
+01.user managemtnt
+*backend commit Messages*
+
+PafBackend\src\main\java\com\example\pafbackend\controllers\AuthController.java
+PafBackend\src\main\java\com\example\pafbackend\controllers\CommentController.java
+PafBackend\src\main\java\com\example\pafbackend\controllers\LikeController.java
+PafBackend\src\main\java\com\example\pafbackend\controllers\UserProfileController.java
+
+PafBackend\src\main\java\com\example\pafbackend\dto(all files)
+PafBackend\src\main\java\com\example\pafbackend\models (comment.java, like.java, notifiaction.java, user.java,userorifile.java, userconention,java)
+
+PafBackend\src\main\java\com\example\pafbackend\repositories\(CommentRepository.java, LikeRepository.java, NotificationRepository.java, userorifileRepository.java, userconentionRepository.java
+						
+Implement User Management Feature
+
+-Added model class to User, Comment, Like, and other models related to user interaction.
+-Added Repository Interfaces defining database operations for user management entities.
+-Added Controller to handling user authentication, profiles, and potentially other related functionalities.
+-Notification feature with its related models and controllers.
+-User profile management functionalities.
+
+
+*frontend commits*
+
+Added components for managing user posts and post-related API service
+
+Components - Community:
+
+src/Components/Community/CenterSection.jsx: Update CenterSection to accommodate user posts and interactions. (Optional, if functionality changes)
+src/Components/Community/CommentCard.jsx: Implement CommentCard component for displaying user comments.
+src/Components/Community/ContactCard.jsx: (Optional, update if related to user management)
+src/Components/Community/Contacts.jsx: (Optional, update if related to user management)
+src/Components/Community/FriendsSection.jsx: Implement FriendsSection component for displaying user friends.
+src/Components/Community/LeftSection.jsx: Update LeftSection to potentially include user profile elements. (Optional)
+src/Components/Community/Navbar.jsx: Update Navbar to potentially include user profile elements or notification indicators. (Optional)
+src/Components/Community/NotificationsDropdown.jsx: Implement NotificationsDropdown for displaying user notifications. (Optional, if implemented)
+src/Components/Community/RightSection.jsx: Update RightSection to potentially include user-related functionalities. (Optional)
+
+Components - Modals:
+src/Components/Modals/AuthModal.jsx: (Optional, update if related to user management)
+src/Components/Modals/CreatePostModal.jsx: Implement CreatePostModal component for creating new posts.
+src/Components/Modals/FriendProfileModal.jsx: Implement FriendProfileModal component for displaying friend profiles. (Optional, if implemented)
+src/Components/Modals/UserProfileModal.jsx: Implement UserProfileModal component for displaying and editing user profiles. (Optional, if implemented)
+
+Services:
+src/Services/AuthService.js: (Optional, update if user management related changes)
+src/Services/CommentService.js: Implement CommentService for handling API calls related to comments.
+src/Services/LikeService.js: Implement LikeService for handling API calls related to likes.
+src/Services/NotificationService.js: Implement NotificationService for handling API calls related to notifications. (Optional, if implemented)
+src/Services/UserConnectionService.js: Implement UserConnectionService for handling API calls related to user connections (friendships, etc.). (Optional, if implemented)
+src/Services/UserService.js: Update UserService for handling user-related functionalities. (Optional, if specific changes)
+
+
+
+---------------------------------------------------------------------------------------------
+
+02.Media Sharing Management & Post Handling
+*backend commit meassge*
+
+
+1. PafBackend\src\main\java\com\example\pafbackend\models\post.java
+
+Added Workout model for workout plan sharing functionality.
+
+2. PafBackend\src\main\java\com\example\pafbackend\repositories\PostRepository.java
+
+Implement WorkoutPlanRepository for CRUD operations on workout plans.
+
+3. PafBackend\src\main\java\com\example\pafbackend\controllers\PostController.java
+
+Introduce WorkoutPlanController to manage CRUD operations for workout plans
+
+*frontend*
+Implement Post functionality.
+
+src/Components/Community/MyPost.jsx: Implement MyPost component for displaying user posts.
+src/Components/Community/FriendsPost.jsx: Implement FriendsPost component for displaying friend posts.
+src/Components/Modals/UploadPostModal.jsx: Implement UploadPostModal component for updating posts
+src/Services/PostService.js: Implement PostService for handling API calls related to posts.
+
+
+-----------------------------------------------------------------------------------
+
+03.Workout plan tracking Management
+*backend commit Messages*
+
+1.PafBackend\src\main\java\com\example\pafbackend\models\WorkoutPlan.java
+
+Added Workout model for workout plan sharing functionality.
+
+2.PafBackend\src\main\java\com\example\pafbackend\repositories\WorkoutPlanRepository.java
+
+Implement WorkoutPlanRepository for CRUD operations on workout plans.
+
+3.PafBackend\src\main\java\com\example\pafbackend\controllers\WorkoutPlanController.java
+
+Introduce WorkoutPlanController to manage CRUD operations for workout plans
+
+
+*frontend commits*
+
+frontend\src\Components\Community\CreateWorkoutPlanBox.jsx
+frontend\src\Components\Community\WorkoutPlanCard.jsx
+frontend\src\Components\Modals\CreateWorkoutPlan.jsx
+frontend\src\Components\Modals\EditWorkoutPlanModal.jsx
+frontend\src\Services\WorkoutPlanService.js
+
+
+Implement workout plan sharing functionality.
+
+-Created components for creating, displaying, and editing workout plans.
+- Implemented service for handling API calls related to workout plans.
+
+-----------------------------------------------------------------------------------
+04.Meal plan Management & Mini Online Store
+*backend commit meassge*
+
+
+1. PafBackend\src\main\java\com\example\pafbackend\models\MealPlan.java
+
+Added Workout model for workout plan sharing functionality.
+
+2. PafBackend\src\main\java\com\example\pafbackend\repositories\MealPlanRepository.java
+
+Implement WorkoutPlanRepository for CRUD operations on workout plans.
+
+3. PafBackend\src\main\java\com\example\pafbackend\controllers\MealPlanController.java
+
+Introduce WorkoutPlanController to manage CRUD operations for workout plans
+
+*frontend commits*
+
+frontend/src/Components/Community/CreateMealPlanBox.jsx:
+	-Create CreateMealPlanBox component for creating meal plans.
+frontend/src/Components/Community/MealPlanCard.jsx:
+	-Implement MealPlanCard component for displaying meal plans.
+frontend/src/Components/Modals/CreateMealPlanModal.jsx:
+	- Add CreateMealPlanModal component for creating meal plans.
+frontend/src/Components/Modals/UpdateMealPlanModal.jsx:
+	-Implement UpdateMealPlanModal component for editing meal plans.
+frontend/src/Services/MealPlanService.js:
+	-Create MealPlanService for handling API calls related to meal plans.
+
+
+--------------------------------------------------------------------------
+05.Workout Status Updates Sharing
+backend commit meassge
+
+1.PafBackend\src\main\java\com\example\pafbackend\models\WorkoutStatusUpdate.java
+
+Added Status Updates model
+
+2.PafBackend\src\main\java\com\example\pafbackend\repositories\WorkoutStatusUpdateRepository.java
+
+Added Status Updates interface
+
+3.PafBackend\src\main\java\com\example\pafbackend\controllers\WorkoutStatusUpdateController.java
+
+Added Status Controller with GET, POST, PUT, DELETE endpoints for managing user Status
+
+
+frontend commit meassge
+
+frontend\src\Components\Community\StoryCard.jsx
+frontend\src\Components\Community\tobox.jsx
+frontend\src\Components\Modals\CreateWorkoutstoryPlan.jsx
+frontend\src\Components\Modals\workoutstroy.jsx
+frontend\src\Services\WorkoutstoryService.js
+
+Added components and services for managing workout stories
+
+- Created StoryCard component to display workout story details
+- Implemented TobBox component for displaying workout stories and creating new stories
+- Added CreateWorkoutStoryModal for creating new workout stories
+- Implemented WorkoutStory component for updating and deleting workout stories
+- Created WorkoutStatusUpdateService for API calls related to workout stories  
+
+
+
